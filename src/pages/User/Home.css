@@ -1,4 +1,5 @@
 .home-container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 24px 16px;
@@ -22,10 +23,17 @@
 /* Mobile responsive */
 @media (max-width: 767px) {
   .home-container {
-    padding: 16px 8px;
+    padding: 8px 0 !important;
   }
 
-  .home-title {
-    font-size: 1.5rem;
+  .home-container .home-card {
+    padding: 16px !important;
+    border-radius: 12px !important;
+  }
+
+  .home-container .home-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem !important;
   }
 }

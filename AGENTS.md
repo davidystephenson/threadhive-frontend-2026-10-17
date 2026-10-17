@@ -33,8 +33,8 @@
 
 1. Prefer Bootstrap utility classes over custom CSS:
 
-- Spacing: m-*, p-*, gap-*, mb-*, mt-*
-- Layout: d-flex, justify-content-*, align-items-*
+- Spacing: m-_, p-_, gap-_, mb-_, mt-*
+- Layout: d-flex, justify-content-_, align-items-_
 - Typography: fw-bold, text-muted, small
 - Borders: border, rounded, shadow-sm
 - Backgrounds: bg-light, bg-body-tertiary

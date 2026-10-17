@@ -1,14 +1,14 @@
-import { getUserName } from '../../services/userService';
+import { getUserName } from "../../services/userService";
 import { Card } from "react-bootstrap";
-import VoteButtons from '../Shared/VoteButtons';
-import './CommentList.css';
+import VoteButtons from "../Shared/VoteButtons";
+import "./CommentList.css";
 
 export default function CommentList({ comments }) {
   const handleUpvote = () => {
-    alert('Upvote clicked!');
+    alert("Upvote clicked!");
   };
   const handleDownvote = () => {
-    alert('Downvote clicked!');
+    alert("Downvote clicked!");
   };
 
   return (
@@ -20,10 +20,10 @@ export default function CommentList({ comments }) {
             <div className="d-flex justify-content-between align-items-center mb-3">
               <div className="d-flex align-items-center gap-2">
                 <div className="comment-avatar">
-                  {(getUserName(comment.user) ?? 'U')[0].toUpperCase()}
+                  {(getUserName(comment.user) ?? "U")[0].toUpperCase()}
                 </div>
                 <span className="comment-author">
-                  {getUserName(comment.user) ?? 'Unknown'}
+                  {getUserName(comment.user) ?? "Unknown"}
                 </span>
               </div>
               <span className="badge comment-badge">

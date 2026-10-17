@@ -1,22 +1,22 @@
 import { Navbar, Container, Button } from "react-bootstrap";
-import './Header.css';
+import "./Header.css";
 
 function Header({ onNavigate, darkMode, onToggleDarkMode }) {
   const isAuthenticated = false;
 
   const handleLogin = () => {
-    console.log('Login clicked');
-    onNavigate('login');
+    console.log("Login clicked");
+    onNavigate("login");
   };
 
   const handleSignup = () => {
-    console.log('Signup clicked');
-    onNavigate('register');
+    console.log("Signup clicked");
+    onNavigate("register");
   };
 
   const handleLogout = () => {
-    console.log('Logout clicked');
-    onNavigate('login');
+    console.log("Logout clicked");
+    onNavigate("login");
   };
 
   return (
@@ -31,7 +31,7 @@ function Header({ onNavigate, darkMode, onToggleDarkMode }) {
               aria-label="Toggle dark mode"
               title={darkMode ? "Switch to light mode" : "Switch to dark mode"}
             >
-              {darkMode ? '☀️' : '🌙'}
+              {darkMode ? "☀️" : "🌙"}
             </button>
             {isAuthenticated ? (
               <Button className="btn-header btn-primary" onClick={handleLogout}>
@@ -39,10 +39,16 @@ function Header({ onNavigate, darkMode, onToggleDarkMode }) {
               </Button>
             ) : (
               <>
-                <Button className="btn-header btn-outline me-2" onClick={handleLogin}>
+                <Button
+                  className="btn-header btn-outline me-2"
+                  onClick={handleLogin}
+                >
                   Login
                 </Button>
-                <Button className="btn-header btn-primary" onClick={handleSignup}>
+                <Button
+                  className="btn-header btn-primary"
+                  onClick={handleSignup}
+                >
                   Register
                 </Button>
               </>

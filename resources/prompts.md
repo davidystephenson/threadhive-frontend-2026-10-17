@@ -1,6 +1,4 @@
-
 # Part 2: AI-Assisted Development with GitHub Copilot
-
 
 ## 2.1 Updating Custom Instructions for Frontend Development
 
@@ -33,63 +31,56 @@
    - Accessibility (aria-label, proper button types)
 ```
 
-
 ```
 Generate a Forgot Password component that displays a form with an email input and a submit button.
 ```
 
 ## 2.2 Augmenting Agents with Skills
 
+1.  ```
+    ---
+    name: fix
+    description: Use when you have lint errors, formatting issues, or before committing code to ensure it passes CI.
+    ---
 
-1. 
-   ```
-   ---
-   name: fix
-   description: Use when you have lint errors, formatting issues, or before committing code to ensure it passes CI.
-   ---
+    # Fix Lint and Formatting
 
-   # Fix Lint and Formatting
+    ## Instructions
 
-   ## Instructions
+    1. Run `npm run prettier` to fix formatting
+    2. Run `npm run lint` to check for remaining lint issues
+    3. Report any remaining manual fixes needed
 
-   1. Run `npm run prettier` to fix formatting
-   2. Run `npm run lint` to check for remaining lint issues
-   3. Report any remaining manual fixes needed
+    ## Common Mistakes
 
-   ## Common Mistakes
+    - **Running prettier on wrong files** - `npm run prettier` only formats changed files
+    - **Ignoring lint errors** - These will fail CI, fix them before committing
+    ```
 
-   - **Running prettier on wrong files** - `npm run prettier` only formats changed files
-   - **Ignoring lint errors** - These will fail CI, fix them before committing
-   ```
+2.  ```
+    Install Prettier and ESLint for this project. Add scripts to package.json for running them on changed files.
+    ```
 
-2. 
-   ```
-   Install Prettier and ESLint for this project. Add scripts to package.json for running them on changed files.
-   ```
+    ```json
+    "scripts": {
+      "prettier": "prettier --write .",
+      "lint": "eslint ."
+    }
+    ```
 
-   ```json
-   "scripts": {
-     "prettier": "prettier --write .",
-     "lint": "eslint ."
-   }
-   ```
-
-3. 
-   ```
-   Use the React fix skill to ensure my code is clean before committing.
-   ```
-
+3.  ```
+    Use the React fix skill to ensure my code is clean before committing.
+    ```
 
 ## 2.3 Visual Context with the Integrated Browser
 
 ### Referencing Browser Content in Copilot Prompts (Agent Mode)
 
-4. 
-   ```
-   1. Make the corners of the badge sharp.
-   2. Change the badge background to a uniform dark green without a gradient.
-   3. Keep the text inside the badge in lowercase
-   ```
+4.  ```
+    1. Make the corners of the badge sharp.
+    2. Change the badge background to a uniform dark green without a gradient.
+    3. Keep the text inside the badge in lowercase
+    ```
 
 ## 2.4 Generate Unit Tests with GenAI
 
@@ -103,18 +94,15 @@ Generate unit tests for the ThreadCard component. Cover rendering, props, and in
 
 ## 2.5 Visualizing Prompt Caching with the Cache Explorer
 
-
 ### Observe a cache hit
 
-1. 
-   ```
-   Explain what the ThreadCard component renders and list the props it expects.
-   ```
+1.  ```
+    Explain what the ThreadCard component renders and list the props it expects.
+    ```
 
-2. 
-   ```
-   Now describe how VoteButtons is used inside it.
-   ```
+2.  ```
+    Now describe how VoteButtons is used inside it.
+    ```
 
 ### Cause and diagnose a cache miss
 

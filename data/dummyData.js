@@ -1,26 +1,50 @@
 export const users = [
-  { _id: "u1", name: "Alice", email: "alice@example.com", password: "password123" },
+  {
+    _id: "u1",
+    name: "Alice",
+    email: "alice@example.com",
+    password: "password123",
+  },
   { _id: "u2", name: "Bob", email: "bob@example.com", password: "password123" },
-  { _id: "u3", name: "Charlie", email: "charlie@example.com", password: "password123" },
-  { _id: "u4", name: "Diana", email: "diana@example.com", password: "password123" },
-  { _id: "u5", name: "Eve", email: "eve@example.com", password: "password123" }
+  {
+    _id: "u3",
+    name: "Charlie",
+    email: "charlie@example.com",
+    password: "password123",
+  },
+  {
+    _id: "u4",
+    name: "Diana",
+    email: "diana@example.com",
+    password: "password123",
+  },
+  { _id: "u5", name: "Eve", email: "eve@example.com", password: "password123" },
 ];
 
 export const subreddits = [
-  { name: "javascript", description: "All about JavaScript programming", author: "u1" },
+  {
+    name: "javascript",
+    description: "All about JavaScript programming",
+    author: "u1",
+  },
   { name: "node", description: "Node.js news and discussions", author: "u2" },
-  { name: "webdev", description: "General web development topics", author: "u3" },
+  {
+    name: "webdev",
+    description: "General web development topics",
+    author: "u3",
+  },
   { name: "react", description: "React tips, tricks, and news", author: "u4" },
-  { name: "css", description: "CSS questions and examples", author: "u5" }
+  { name: "css", description: "CSS questions and examples", author: "u5" },
 ];
 
 export const threads = [
   {
     _id: "t1",
     title: "How do I learn Node.js is working ?",
-    content: "I am new to backend and want to learn Node.js. Any good resources?",
+    content:
+      "I am new to backend and want to learn Node.js. Any good resources?",
     author: "u1", // Alice
-    subreddit: "node", 
+    subreddit: "node",
     upvotes: 3,
     downvotes: 0,
     voteCount: 3,
@@ -32,7 +56,8 @@ export const threads = [
   {
     _id: "t2",
     title: "Best way to manage state in React?",
-    content: "What is the best way to manage state in larger React applications?",
+    content:
+      "What is the best way to manage state in larger React applications?",
     author: "u2", // Bob
     subreddit: "react",
     upvotes: 2,
