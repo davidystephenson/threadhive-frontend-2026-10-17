@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <Container className="home-container">
       <Card className="home-card shadow-lg border-0 rounded-4 p-4">
-        <h1 className="home-title mb-4 display-6 fw-semibold border-bottom pb-2">
+        <h1 className="home-title mb-6 display-6 fw-semibold border-bottom pb-5">
           🧵 Recent Threads
         </h1>
         <ThreadList
