@@ -1,13 +1,13 @@
-import { useState, useEffect } from 'react';
-import { fetchRecentThreads } from '../../services/threadService.js';
-import ThreadPage from './ThreadPage.jsx';
-import ThreadList from '../../components/ThreadList/ThreadList.jsx';
+import { useState, useEffect } from "react";
+import { fetchRecentThreads } from "../../services/threadService.js";
+import ThreadPage from "./ThreadPage.jsx";
+import ThreadList from "../../components/ThreadList/ThreadList.jsx";
 import { Container, Card } from "react-bootstrap";
-import './Home.css';
+import "./Home.css";
 
 export default function Home() {
   const [recentThreads, setRecentThreads] = useState([]);
-  console.log('recentThreads', recentThreads)
+  console.log("recentThreads", recentThreads);
   const [selectedThread, setSelectedThread] = useState(null);
 
   useEffect(() => {
@@ -15,7 +15,12 @@ export default function Home() {
   }, []);
 
   if (selectedThread) {
-    return <ThreadPage thread={selectedThread} goBack={() => setSelectedThread(null)} />;
+    return (
+      <ThreadPage
+        thread={selectedThread}
+        goBack={() => setSelectedThread(null)}
+      />
+    );
   }
 
   return (
@@ -24,10 +29,7 @@ export default function Home() {
         <h1 className="home-title mb-6 display-6 fw-semibold border-bottom pb-5">
           🧵 Recent Threads
         </h1>
-        <ThreadList
-          threads={recentThreads}
-          onSelect={setSelectedThread}
-        />
+        <ThreadList threads={recentThreads} onSelect={setSelectedThread} />
       </Card>
     </Container>
   );

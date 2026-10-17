@@ -1,13 +1,9 @@
-import { getUserName } from '../../services/userService';
+import { getUserName } from "../../services/userService";
 import { Card, Button, Col, Row, Stack } from "react-bootstrap";
-import VoteButtons from '../Shared/VoteButtons';
-import './ThreadCard.css';
+import VoteButtons from "../Shared/VoteButtons";
+import "./ThreadCard.css";
 
-export default function ThreadCard({
-  thread,
-  goBack,
-  onSelect
-}) {
+export default function ThreadCard({ thread, goBack, onSelect }) {
   const voteCount = thread.upvotedBy.length - thread.downvotedBy.length;
 
   const handleUpvote = async () => {
@@ -18,25 +14,25 @@ export default function ThreadCard({
     alert("Downvote clicked!");
   };
 
-  function handleSelect () {
-    console.log('select')
-    onSelect(thread)
+  function handleSelect() {
+    console.log("select");
+    onSelect(thread);
   }
 
   return (
-    <Card
-      className="single-thread-card"
-      onClick={handleSelect}
-    >
+    <Card className="single-thread-card" onClick={handleSelect}>
       <Card.Body>
-        {goBack && <Button
-          onClick={goBack}
-          variant="link"
-          size="sm"
-          className="back-to-home-btn text-decoration-none"
-        >
-          <i className="bi bi-arrow-left me-2"></i>Back to Home
-        </Button>}
+        {goBack && (
+          <Button
+            onClick={goBack}
+            variant="link"
+            size="sm"
+            className="back-to-home-btn text-decoration-none"
+          >
+            <i className="bi bi-arrow-left me-2"></i>
+            Back to Home
+          </Button>
+        )}
 
         <Row className="g-3">
           {/* Voting UI */}
@@ -61,12 +57,16 @@ export default function ThreadCard({
               <div className="d-flex align-items-center gap-2">
                 <i className="bi bi-person-circle thread-meta-icon"></i>
                 <span>
-                  <strong className="thread-meta-author">{getUserName(thread.author)}</strong>
+                  <strong className="thread-meta-author">
+                    {getUserName(thread.author)}
+                  </strong>
                 </span>
               </div>
               <div className="d-flex align-items-center gap-2">
                 <i className="bi bi-bookmark thread-meta-icon"></i>
-                <span className="badge thread-meta-badge">r/{thread.subredditName}</span>
+                <span className="badge thread-meta-badge">
+                  r/{thread.subredditName}
+                </span>
               </div>
             </div>
           </Col>

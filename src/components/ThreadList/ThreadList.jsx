@@ -1,25 +1,12 @@
 import { Container } from "react-bootstrap";
-import './ThreadList.css';
+import "./ThreadList.css";
 import ThreadCard from "./ThreadCard";
 
 export default function ThreadList({ threads, onSelect }) {
-  console.log('threads', threads);
-  const handleUpvote = () => {
-    alert('Upvote clicked!');
-  };
-  const handleDownvote = () => {
-    alert('Downvote clicked!');
-  };
-
+  console.log("threads", threads);
   const cards = threads.map((thread) => {
-    return (
-      <ThreadCard
-        key={thread._id}
-        thread={thread}
-        onSelect={onSelect}
-      />
-    )
-  })
+    return <ThreadCard key={thread._id} thread={thread} onSelect={onSelect} />;
+  });
   /*
   [
     <ThreadCard thread={threads[0]} />,
@@ -29,7 +16,7 @@ export default function ThreadList({ threads, onSelect }) {
     <ThreadCard thread={threads[4]} />
   ]
   */
-  console.log('cards', cards)
+  console.log("cards", cards);
 
   return (
     <Container fluid className="px-0">
