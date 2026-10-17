@@ -29,14 +29,14 @@ export default function ThreadCard({
       onClick={handleSelect}
     >
       <Card.Body>
-        <Button
+        {goBack && <Button
           onClick={goBack}
           variant="link"
           size="sm"
           className="back-to-home-btn text-decoration-none"
         >
           <i className="bi bi-arrow-left me-2"></i>Back to Home
-        </Button>
+        </Button>}
 
         <Row className="g-3">
           {/* Voting UI */}
