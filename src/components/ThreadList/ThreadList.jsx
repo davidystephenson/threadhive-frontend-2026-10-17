@@ -13,7 +13,11 @@ export default function ThreadList({ threads, onSelect }) {
 
   const cards = threads.map((thread) => {
     return (
-      <ThreadCard key={thread._id} thread={thread}/>
+      <ThreadCard
+        key={thread._id}
+        thread={thread}
+        onSelect={onSelect}
+      />
     )
   })
   /*

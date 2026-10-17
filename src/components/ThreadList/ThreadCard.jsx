@@ -3,7 +3,11 @@ import { Card, Button, Col, Row, Stack } from "react-bootstrap";
 import VoteButtons from '../Shared/VoteButtons';
 import './ThreadCard.css';
 
-export default function ThreadCard({ thread, goBack }) {
+export default function ThreadCard({
+  thread,
+  goBack,
+  onSelect
+}) {
   const voteCount = thread.upvotedBy.length - thread.downvotedBy.length;
 
   const handleUpvote = async () => {
@@ -16,6 +20,7 @@ export default function ThreadCard({ thread, goBack }) {
 
   function handleSelect () {
     console.log('select')
+    onSelect(thread)
   }
 
   return (
