@@ -14,8 +14,15 @@ export default function ThreadCard({ thread, goBack }) {
     alert("Downvote clicked!");
   };
 
+  function handleSelect () {
+    console.log('select')
+  }
+
   return (
-    <Card className="single-thread-card">
+    <Card
+      className="single-thread-card"
+      onClick={handleSelect}
+    >
       <Card.Body>
         <Button
           onClick={goBack}

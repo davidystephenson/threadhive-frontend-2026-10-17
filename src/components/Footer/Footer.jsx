@@ -7,3 +7,5 @@ function Footer() {
 }
 
 export default Footer;
+
+// Don't put the ThreadList here

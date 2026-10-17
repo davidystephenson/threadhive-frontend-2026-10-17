@@ -7,6 +7,7 @@ import './Home.css';
 
 export default function Home() {
   const [recentThreads, setRecentThreads] = useState([]);
+  console.log('recentThreads', recentThreads)
   const [selectedThread, setSelectedThread] = useState(null);
 
   useEffect(() => {
@@ -23,7 +24,7 @@ export default function Home() {
         <h1 className="home-title mb-4 display-6 fw-semibold border-bottom pb-2">
           🧵 Recent Threads
         </h1>
-        {/* Your Code Here  */}
+        <ThreadList threads={recentThreads} />
       </Card>
     </Container>
   );
